@@ -16,9 +16,10 @@ Airbnb revenue optimization analysis using RevPAR decomposition and simulation
 - 수익 시뮬레이션 모델 구축
 
 ## 📊 주요 결과
-- 점유율 기반 의사결정 구조 전환
-- 수익 영향 요인 정량화
-- 예측 모델 (R² 0.85)
+- 점유율이 RevPAR의 58.2% 영향 → 가격 중심 전략 한계 규명 및 의사결정 구조 전환
+- 수익 직결 5가지 핵심 액션 도출 (슈퍼호스트 +83.1%, 최대 +148%)
+- 예측 모델 기반 End-to-End 의사결정 도구 구축 (R² 0.85)
+- Freemium 구조 설계를 통한 호스트–플랫폼 수익 선순환 구조 제시
 
 ## 🛠️ 사용 기술
 Python, Pandas, LightGBM, SHAP, K-Means, Streamlit
