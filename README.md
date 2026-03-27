@@ -22,4 +22,4 @@ Airbnb revenue optimization analysis using RevPAR decomposition and simulation
 - Freemium 구조 설계를 통한 호스트–플랫폼 수익 선순환 구조 제시
 
 ## 🛠️ 사용 기술
-Python, Pandas, LightGBM, SHAP, K-Means, Streamlit
+Python, Pandas, LightGBM, SHAP, K-Means, Streamlit,Claude AI Agent 
