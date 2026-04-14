@@ -1,10 +1,11 @@
 
-[🚀 대시보드 바로가기](https://seoul-airbnb-dashboard-knwh4rregjlk2kappoqjfw4.streamlit.app/)
-
 # 서울 에어비앤비 RevPAR 수익 최적화 가이드
+> **End-to-End revenue optimization system for Airbnb hosts**
 
 서울 Airbnb 32,061개 리스팅을 분석해 RevPAR 왜곡 구조를 정량화하고,  
 점유율 기반 수익 전략을 실행 가능한 대시보드로 구현한 의사결정 분석 프로젝트
+
+[🚀 대시보드 바로가기](https://seoul-airbnb-dashboard-knwh4rregjlk2kappoqjfw4.streamlit.app/)
 
 ---
 
