@@ -1,11 +1,9 @@
+[🚀 대시보드 바로가기](https://seoul-airbnb-dashboard-knwh4rregjlk2kappoqjfw4.streamlit.app/)
 
 # 서울 에어비앤비 RevPAR 수익 최적화 가이드
-> **End-to-End revenue optimization system for Airbnb hosts**
 
 서울 Airbnb 32,061개 리스팅을 분석해 RevPAR 왜곡 구조를 정량화하고,  
 점유율 기반 수익 전략을 실행 가능한 대시보드로 구현한 의사결정 분석 프로젝트
-
-[🚀 대시보드 바로가기](https://seoul-airbnb-dashboard-knwh4rregjlk2kappoqjfw4.streamlit.app/)
 
 ---
 
@@ -70,6 +68,17 @@ notebooks 01~08 순차 실행 (`03_data_preparation.ipynb`부터 실행 가능)
 ```bash
 streamlit run dashboard/app.py
 ```
+
+**리스크 자동 감지 (수동 실행):**
+```bash
+python3 risk_detection/hooks.py --trigger manual
+```
+
+**cron 자동화 설정 (Mac):**
+```bash
+bash setup_cron.sh
+```
+→ 매주 월요일 오전 8시 자동 스캔 + 이메일 알림
 
 > ### ⚠️ 실행 안내 및 데이터 공지
 >
@@ -166,11 +175,19 @@ airbnb-revpar-optimization/
 │   └── app.py
 ├── src/
 │   └── predict_utils.py
+├── risk_detection/
+│   ├── hooks.py
+│   ├── scorer.py
+│   ├── email_alert.py
+│   ├── duplicate_tracker.py
+│   ├── sheets_sync.py
+│   └── config.py
 ├── outputs/
 │   ├── reports/
 │   │   └── kpi_benchmark.md
 │   └── simulation_results/
 │       └── revpar_scenario_summary.csv
+├── setup_cron.sh
 ├── requirements.txt
 └── README.md
 ```
