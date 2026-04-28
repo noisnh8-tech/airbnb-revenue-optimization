@@ -374,3 +374,4 @@ if __name__ == "__main__":
     print(f"  월 순이익      : ₩{res['net_profit']:,.0f}")
     print(f"  RevPAR 트렌드  : {res['revpar_trend']:.3f} ({res['trend_label']})")
 
+
