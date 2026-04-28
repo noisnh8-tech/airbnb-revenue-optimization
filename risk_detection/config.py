@@ -74,3 +74,4 @@ SHEETS_CONFIG = {
   'spreadsheet_id': os.environ.get('GOOGLE_SHEETS_ID', ''),
   'credentials_path': os.environ.get('GOOGLE_CREDENTIALS_PATH', ''),
 }
+

@@ -69,3 +69,4 @@ echo "  tail -f $LOG_DIR/cron_risk_scan.log"
 echo ""
 echo "  새 터미널을 열거나 'source ~/.zshrc' 를 실행해야"
 echo "  환경변수가 현재 세션에 적용됩니다."
+

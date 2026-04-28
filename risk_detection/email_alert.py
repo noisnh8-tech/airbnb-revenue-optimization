@@ -251,3 +251,4 @@ def send_alert_email(risk_df: pd.DataFrame, scan_meta: dict) -> bool:
   except Exception as e:
     print(f'[오류] 이메일 발송 실패: {e}')
     return False
+

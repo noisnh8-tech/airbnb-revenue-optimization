@@ -159,3 +159,4 @@ def rule_hit_summary(df: pd.DataFrame) -> dict:
     'total_flagged': int((df['rule_count'] > 0).sum()),
     'high_risk': int((df['rule_count'] >= THRESHOLDS['high_risk_rule_count']).sum()),
   }
+

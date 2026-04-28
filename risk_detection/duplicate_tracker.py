@@ -186,3 +186,4 @@ def _parse_rules(raw) -> list[str]:
   if isinstance(raw, str):
     return [r.strip() for r in raw.split(',') if r.strip()]
   return []
+

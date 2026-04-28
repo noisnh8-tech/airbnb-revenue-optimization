@@ -127,3 +127,4 @@ def build_risk_report(csv_path=None) -> tuple[pd.DataFrame, dict]:
   }
 
   return risk_df, scan_meta
+
