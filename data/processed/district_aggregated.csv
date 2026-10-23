@@ -1,4 +1,4 @@
-district,total_listings,ao_count,median_revpar_ao,dormant_count,superhost_rate,median_pop,dormant_ratio,supply_share
+﻿district,total_listings,ao_count,median_revpar_ao,dormant_count,superhost_rate,median_pop,dormant_ratio,supply_share
 Dobong-gu,183,71,34427.7,112,0.4644808743169399,258262.0,0.6120218579234973,0.005707869374005801
 Dongdaemun-gu,862,337,26403.1,519,0.3294663573085847,362689.0,0.6020881670533643,0.026886248089579238
 Dongjak-gu,806,242,25835.75,555,0.2679900744416873,379647.0,0.6885856079404467,0.02513957768004741

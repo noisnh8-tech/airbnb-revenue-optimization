@@ -5,32 +5,31 @@
 
 ## 핵심 지표
 
-| 지표 | 값 |
-|------|-----|
-| TTM RevPAR 중위값 (전체 32,061개) | ₩8,868 |
-| TTM RevPAR 중위값 (Active+Operating) | ₩47,850 |
-| Active+Operating 비율 | 44.9% |
-| 비활성 비율 | 54.3% |
-| 슈퍼호스트 RevPAR 프리미엄 | +83.1% |
-| 슈퍼호스트 + 즉시예약 결합 프리미엄 | +148.2% |
+| 지표 | 값 | 근거 노트북 |
+|------|-----|------|
+| TTM RevPAR 중위값 (전체 32,061개) | ₩8,868 | `00_quick_eda` |
+| TTM RevPAR 중위값 (Active+Operating) | ₩47,850 | `00_quick_eda` |
+| Active+Operating 비율 | 44.9% | `00_quick_eda` |
+| 비활성 비율 | 54.3% | `00_quick_eda` |
+| 슈퍼호스트 RevPAR 프리미엄 (평균 기준) | +83.1% | `01_host_eda` |
 
-## RevPAR 기여도 분해 (log RevPAR 분산 분해)
+## RevPAR 기여도 분해 (log RevPAR 분산 분해, `01c_occupancy_eda`)
 
 | 요인 | 기여도 |
 |------|--------|
 | 점유율 | 58.2% |
 | ADR (평균 일일 요금) | 37.5% |
-| 교호작용 | 4.3% |
+| 교호작용 (2×Cov) | 4.5% |
 
-## 모델 성능 (LightGBM, 5-Fold CV)
+## 모델 성능 (LightGBM, `03_host_modeling`)
 
 | 지표 | 값 |
 |------|-----|
-| 검증 R² | 0.847 |
+| 검증 R² (5-Fold CV) | 0.847 |
 | 테스트 R² | 0.85 |
 | 평균 오차 (MAE) | ₩19,554 |
 
-## 자치구 군집 분류 (K-Means k=4)
+## 자치구 군집 분류 (K-Means k=4, Silhouette 0.3188, `05_platform_clustering`)
 
 | 군집 | 유형 | RevPAR 중위값 | 소속 자치구 |
 |------|------|------|-----------|

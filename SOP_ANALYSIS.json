@@ -1,0 +1,41 @@
+{
+  "version": "1.0",
+  "domain": "hospitality",
+  "domain_korean": "서울 에어비앤비",
+  "analysis_perspectives": ["host", "platform"],
+  "data_preprocessing_rules": {
+    "note": "전처리 완료 — 추가 전처리 불필요",
+    "exclude_columns": ["exng", "ttm_exng", "nearest_poi_image", "nearest_poi_image"],
+    "active_filter": "optional — Dormant 포함 전체 분석 권장, 활성 서브셋 별도 분석",
+    "revpar_zero_handling": "포함하여 전체 분포 분석 (Dormant 특성 이해)"
+  },
+  "feature_engineering_specs": {
+    "mandatory_features": [
+      {"name": "revpar_trend", "formula": "(l90d_revpar - ttm_revpar/4) / (ttm_revpar/4 + 1e-6)", "reason": "수익 성장 트렌드"},
+      {"name": "log_ttm_revpar", "formula": "np.log1p(ttm_revpar)", "reason": "우편향 분포 정규화"},
+      {"name": "adr_occupancy_ratio", "formula": "ttm_avg_rate / (ttm_occupancy + 1e-6)", "reason": "가격 효율성"},
+      {"name": "is_active_operating", "formula": "(refined_status=='Active') & (operation_status=='Operating')", "reason": "실제 활성 숙소 필터"}
+    ]
+  },
+  "visualization_standards": {
+    "font_family": "AppleGothic",
+    "max_figsize": [14, 8],
+    "max_subplot_grid": "2x2",
+    "color_palette": "Set2",
+    "save_dpi": 100
+  },
+  "analysis_methodology": {
+    "reproducibility": {
+      "random_seed": 42
+    },
+    "host_perspective_focus": ["room_type", "superhost", "rating_overall", "photos_count", "instant_book", "bedrooms_group", "min_nights", "extra_guest_fee_policy", "nearest_poi_dist_km"],
+    "platform_perspective_focus": ["district", "nearest_poi_type_name", "ttm_pop", "room_type", "operation_status"],
+    "primary_metric": "ttm_revpar",
+    "secondary_metric": "l90d_revpar"
+  },
+  "naming_conventions": {
+    "feature_prefix": "feat_",
+    "kpi_prefix": "kpi_",
+    "district_prefix": "dist_"
+  }
+}
